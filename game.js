@@ -53,6 +53,7 @@ function checkAnswer(currentLevel) {
       setTimeout(() => {
         $("body").removeClass('game-over')
       }, 200);
+      playSound("wrong");
       startover();
     }
 
@@ -86,6 +87,7 @@ function animatePress(currentColor) {
   }, 100);
 }
 function startover(){
+  var A
 level=0;
 $("#level-title").text("Level " + level);
 gamePattern=[];
